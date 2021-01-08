@@ -1,0 +1,41 @@
+{
+    "name": "arispati/emoji-remover",
+    "description": "PHP library that remove an emoji from text",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aris",
+            "email": "masarispati@gmail.com",
+            "homepage": "https://github.com/arispati"
+        }
+    ],
+    "homepage": "https://github.com/arispati/emoji-remover",
+    "keywords": [
+        "emoji",
+        "emoji remover"
+    ],
+    "require": {
+        "php": ">=7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Arispati\\EmojiRemover\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Arispati\\EmojiRemover\\Test\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit": "^8"
+    },
+    "scripts": {
+        "test": "phpunit tests"
+    }
+}
