@@ -5,7 +5,7 @@ namespace Arispati\EmojiRemover;
 class EmojiRegex
 {
     /**
-     * Get teh regex
+     * Get the emoji regex
      *
      * @return array
      */
