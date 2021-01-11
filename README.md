@@ -22,3 +22,8 @@ $textFiltered = EmojiRemover::filter($text);
 $textReplaced = EmojiRemover::filter($text, 'removed');
 // result: "Emoji removed"
 ```
+
+## Testing
+```bash
+composer test
+```
