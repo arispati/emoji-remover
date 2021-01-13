@@ -34,4 +34,18 @@ class FilterTest extends TestCase
 
         $this->assertEquals("Emoji !@#$%^&*()-=_+\]'/[;.,]|}\"?{:><} ", EmojiRemover::filter($text));
     }
+
+    public function testTextIsNull(): void
+    {
+        $text = null;
+
+        $this->assertEquals(null, EmojiRemover::filter($text));
+    }
+
+    public function testTextIsEmptyString(): void
+    {
+        $text = '';
+
+        $this->assertEquals('', EmojiRemover::filter($text));
+    }
 }
