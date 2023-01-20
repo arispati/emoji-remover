@@ -48,4 +48,18 @@ class FilterTest extends TestCase
 
         $this->assertEquals('', EmojiRemover::filter($text));
     }
+
+    public function testRemoveMultipleEmoji(): void
+    {
+        $text = 'Emoji 🌆, another 😀, yet 🙈';
+
+        $this->assertEquals('Emoji , another , yet ', EmojiRemover::filter($text));
+    }
+
+    public function testBellPepperEmoji(): void
+    {
+        $text = 'Bell Pepper 🫑';
+
+        $this->assertEquals('Bell Pepper ', EmojiRemover::filter($text));
+    }
 }
