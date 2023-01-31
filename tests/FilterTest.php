@@ -62,4 +62,32 @@ class FilterTest extends TestCase
 
         $this->assertEquals('Bell Pepper ', EmojiRemover::filter($text));
     }
+
+    public function testToneEmoji(): void
+    {
+        $text = 'Biceps 💪 & M-Dark Tone 💪🏽 & Dark 💪🏿';
+
+        $this->assertEquals('Biceps  & M-Dark Tone  & Dark ', EmojiRemover::filter($text));
+    }
+
+    public function testFamilyEmoji(): void
+    {
+        $text = 'Family 👩🏽‍🤝‍👨🏻';
+
+        $this->assertEquals('Family ', EmojiRemover::filter($text));
+    }
+
+    public function testSurfingEmoji(): void
+    {
+        $text = 'Surfing 🏄🏼';
+
+        $this->assertEquals('Surfing ', EmojiRemover::filter($text));
+    }
+
+    public function testWomanEmoji(): void
+    {
+        $text = 'Woman Hair Cut 💇🏼‍♀️ & Elf 🧝🏻‍♀️ & Mermaid 🧜🏻‍♀️ & Fairy 🧚🏻‍♀️';
+
+        $this->assertEquals('Woman Hair Cut  & Elf  & Mermaid  & Fairy ', EmojiRemover::filter($text));
+    }
 }
